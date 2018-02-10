@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<database>
+  <name>todolist</name>
+
+  <version>
+    <version>2</version>
+    <table>
+      <name>todo</name>
+      <addcolumn>
+        <name>completed</name>
+        <column_def>bool</column_def>
+      </addcolumn>
+      <addcolumn>
+        <name>whenadded</name>
+        <column_def>TIMESTAMP DEFAULT CURRENT_TIMESTAMP</column_def>
+      </addcolumn>
+      <addcolumn>
+        <name>whencompleted</name>
+        <column_def>TIMESTAMP</column_def>
+      </addcolumn>
+    </table>
+  </version>
+
+  <version>
+    <version>1</version>
+    <addtable>
+      <name>todo</name>
+      <addcolumn>
+        <name>id</name>
+        <column_def>INT AUTO_INCREMENT PRIMARY KEY</column_def>
+      </addcolumn>
+      <addcolumn>
+        <name>title</name>
+        <column_def>TEXT</column_def>
+      </addcolumn>
+      <addcolumn>
+        <name>description</name>
+        <column_def>TEXT</column_def>
+      </addcolumn>
+    </addtable>
+  </version>
+</database>
+
